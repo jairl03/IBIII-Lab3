@@ -1,3 +1,0 @@
-etapa,descripcion,entrada_Vpp_V,salida_Vpp_V,frecuencia_CH2_Hz,ch1_V_por_div,ch2_V_por_div,fase_salida_vs_V1_deg
-B,Señal diferencial (V1 por divisor RD1/RD2; V2 a GND),0.0113,0.233,59.998,0.010,0.100,180
-C,Señal de modo común (V1 = V2 = salida del generador),1.05,0.019,60.070,0.200,0.032,
