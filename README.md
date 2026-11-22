@@ -74,30 +74,14 @@ El **TL084N** (DIP-14) aloja los tres amplificadores del circuito; el cuarto se 
 1. **Medir y aparear.** Mide cada resistencia con el multímetro y elige los pares $R_{2a}$–$R_{2b}$ y $R_{3a}$–$R_{3b}$ más parecidos entre sí.
 2. **Armar** el circuito de la Etapa A con la fuente apagada, siguiendo la lista de conexiones. Mantén cables cortos y una tierra común.
 3. **Verificar la alimentación** antes de energizar: $+12.00\text{ V}$ en el pin 4 y $-12.00\text{ V}$ en el pin 11.
-4. **Offset.** Con V1 y V2 a GND, mide la tensión continua en VOUT (informe: 15 mV).
+4. **Offset.** Con V1 y V2 a GND, mide la tensión continua en VOUT.
 5. **Configurar los instrumentos.** Generador: senoidal, **60 Hz**, **1 Vpp**, offset 0 V, carga **High-Z**. Osciloscopio: puntas ×1, CH1 = V1, CH2 = VOUT. Usa la medida Pico-Pico y el modo de adquisición Promedio.
-6. **Etapa B.** Agrega el divisor $R_{D1}/R_{D2}$, deja V2 a GND y mide $V_{pp}$ de V1 y VOUT (informe: 11.3 mVpp → 233 mVpp).
-7. **Etapa C.** Retira el divisor, une V1 con V2 y conéctalos al generador. Mide $V_{pp}$ de la entrada común y de VOUT (informe: 1.05 Vpp → 19 mVpp).
-8. **Calcular.** Escribe tus valores en la sección `DATOS` de `analisis_lab3.py` y ejecútalo (ver sección 5).
-
-> **Precaución.** Esta práctica es didáctica: no es un dispositivo médico y no debe conectarse a personas.
+6. **Etapa B.** Agrega el divisor $R_{D1}/R_{D2}$, deja V2 a GND y mide $V_{pp}$ de V1 y VOUT.
+7. **Etapa C.** Retira el divisor, une V1 con V2 y conéctalos al generador. Mide $V_{pp}$ de la entrada común y de VOUT.
 
 ---
 
-## 5. Código de Análisis (`analisis_lab3.py`)
-
-El script reproduce las Tablas 5 y 6 y las Figuras 12 y 13 del informe, y permite recalcular con tus propias mediciones editando la sección `DATOS` al inicio del archivo (resistencias en ohms, tensiones en volts).
-
-```bash
-pip install -r requirements.txt
-python analisis_lab3.py
-```
-
-La salida esperada con los datos del informe incluye `Ad medida: 20.619`, `CMRR medido: 61.13 dB` y `CMRR esperado por apareamiento: 82.9 dB`.
-
----
-
-## 6. Resultados Metrológicos
+## 5. Nuestros Resultados Metrológicos
 
 ### Resistencias medidas (Fluke 179)
 
@@ -129,31 +113,9 @@ La salida esperada con los datos del informe incluye `Ad medida: 20.619`, `CMRR 
 | Peor caso con resistencias de 5 % sin aparear | $A_{cm}$ / CMRR | **0.105 / 46.0** | — / dB |
 | Peor caso con resistencias de 1 % sin aparear | $A_{cm}$ / CMRR | **0.0202 / 60.3** | — / dB |
 
-### Capturas del osciloscopio
 
-[![Etapa B](fig6_osciloscopio_etapa_B.png)](fig6_osciloscopio_etapa_B.png)
-*Figura 6. Etapa B: V1 (CH1, amarillo) y VOUT (CH2, verde). Vpp(1) = 11.3 mV, Vpp(2) = 233 mV, f = 59.998 Hz.*
 
-[![Etapa C](fig10_osciloscopio_etapa_C.png)](fig10_osciloscopio_etapa_C.png)
-*Figura 10. Etapa C: entrada común V1 = V2 (CH1, 200 mV/div) y VOUT (CH2, 32 mV/div). Vpp(1) = 1.05 V, Vpp(2) = 19 mV, f = 60.070 Hz.*
-
-### Ganancias y peor caso por tolerancia
-
-[![Ganancias](fig12_ganancias.png)](fig12_ganancias.png)
-*Figura 12. (a) Ganancia diferencial nominal, teórica y medida. (b) Ganancias medidas en dB: diferencial +26.3 dB y modo común −34.8 dB.*
-
-[![Peor caso](fig13_peor_caso.png)](fig13_peor_caso.png)
-*Figura 13. Ganancia de modo común del restador en el peor caso en función de la tolerancia de las resistencias, comparada con la $A_{cm}$ medida y con la calculada con las resistencias medidas.*
-
-### Limitaciones
-
-- La señal de prueba (60 Hz) coincide con la frecuencia de la red: no se separa la interferencia captada de la fuga real de modo común. Repetir a 100 Hz o 1 kHz permitiría distinguirlas.
-- La lectura de $V_{pp}$ de una señal de ≈ 10 mV está afectada por ruido de algunos cientos de µV.
-- El protoboard introduce capacitancias y resistencias de contacto no controladas.
-
----
-
-## 7. Componentes e Instrumental Utilizados
+## 6. Componentes e Instrumental Utilizados
 
 - Circuito integrado **TL084N** (cuatro op-amps con entrada JFET, DIP-14)
 - Resistencias: 7 de 10 kΩ, 1 de 1 kΩ y 1 de 100 Ω
@@ -166,15 +128,8 @@ La salida esperada con los datos del informe incluye `Ad medida: 20.619`, `CMRR 
 
 ---
 
-## 8. Integrantes
+## 7. Integrantes
 
 - **Sotomayor Villanueva, Genny Solangch** — *Código: 23190393*
 - **Lázaro Canales, Jair Renato** — *Código: 23190377*
 - **Arroyo Ramos, Rosbeth Nayelhy** — *Código: 23190114*
-
-**Grupo:** L12 Grupo A — 14:00 a 16:00
-**Fecha de la práctica:** 30/10/2026
-**Docente:** Dra. María Elisa Armas Alvarado
-**Curso:** Instrumentación Biomédica III — Universidad Nacional Mayor de San Marcos (UNMSM)
-
-El informe completo en PDF está en [`Informe_Laboratorio_3-IBI_III.pdf`](Informe_Laboratorio_3-IBI_III.pdf).
