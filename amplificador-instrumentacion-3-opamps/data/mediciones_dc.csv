@@ -1,0 +1,4 @@
+magnitud,valor_V,instrumento,condicion
+alimentacion_positiva,12.00,Fluke 179,Pin 4 del TL084N respecto a GND
+alimentacion_negativa,-12.00,Fluke 179,Pin 11 del TL084N respecto a GND
+offset_vout,0.015,Fluke 179,V1 y V2 conectadas a GND

@@ -1,0 +1,6 @@
+parametro,valor
+forma_de_onda,senoidal
+frecuencia_Hz,60
+amplitud_Vpp_nominal,1
+offset_V,0
+carga,High-Z

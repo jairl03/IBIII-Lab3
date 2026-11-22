@@ -1,0 +1,47 @@
+{
+  "resumen": {
+    "ad_nominal": 21.0,
+    "ganancia_primera_etapa": 21.235897435897435,
+    "ka": 0.985929648241206,
+    "kb": 0.9889336016096579,
+    "ad_teorica": 20.96899671187802,
+    "ad_medida": 20.619469026548675,
+    "ad_dif_vs_teorica_pct": -1.6668784402610606,
+    "ad_dif_vs_nominal_pct": -1.8120522545301196,
+    "acm_medida": 0.018095238095238095,
+    "cmrr_medido_dB": 61.13426351319417,
+    "cmrr_medido_razon": 1139.4969725197952,
+    "ganancia_dif_dB": 26.28554955085199,
+    "ganancia_cm_dB": -34.84871396234218,
+    "acm_restador_informe": 0.0015103336612246978,
+    "acm_restador_exacta": 0.0015126182194381554,
+    "cmrr_restador_dB": 56.418541965114606,
+    "cmrr_primera_etapa_dB": 26.5414123827972,
+    "cmrr_esperado_por_apareamiento_dB": 82.85009499700726,
+    "acm_medida_sobre_acm_apareamiento": 11.98095398374757,
+    "v1_esperada_Vpp": 0.009685062006205577,
+    "v1_medida_Vpp": 0.0113,
+    "modo_comun_equivalente_entrada_Vpp": 0.0009214592274678111,
+    "offset_salida_V": 0.015,
+    "offset_referido_a_entrada_V": 0.0007142857142857143,
+    "salida_si_ganara_igual_Vpp": 21.65044247787611,
+    "factor_entrada_C_sobre_B": 92.9203539823009,
+    "factor_salida_B_sobre_C": 12.263157894736842
+  },
+  "peor_caso": [
+    {
+      "tolerancia_pct": 5.0,
+      "acm_peor_caso": 0.10526315789473673,
+      "cmrr_peor_caso_dB": 45.99885800045535,
+      "veces_mayor_que_medida": 5.81717451523545,
+      "diferencia_dB_vs_medido": -15.13540551273882
+    },
+    {
+      "tolerancia_pct": 1.0,
+      "acm_peor_caso": 0.02020202020202022,
+      "cmrr_peor_caso_dB": 60.33648987334975,
+      "veces_mayor_que_medida": 1.116427432216907,
+      "diferencia_dB_vs_medido": -0.7977736398444222
+    }
+  ]
+}

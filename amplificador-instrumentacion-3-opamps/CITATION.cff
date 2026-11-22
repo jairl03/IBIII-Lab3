@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Si usas este material, cítalo así."
+title: "Amplificador de instrumentación de tres op-amps y rechazo de modo común (Informe de Laboratorio N.º 3, Instrumentación Biomédica III)"
+type: software
+authors:
+  - family-names: "Sotomayor Villanueva"
+    given-names: "Genny Solangch"
+  - family-names: "Lázaro Canales"
+    given-names: "Jair Renato"
+  - family-names: "Arroyo Ramos"
+    given-names: "Rosbeth Nayelhy"
+date-released: "2026-10-30"
+license: MIT
+repository-code: "https://github.com/jairl03/amplificador-instrumentacion-3-opamps"
+keywords:
+  - amplificador de instrumentación
+  - CMRR
+  - biopotenciales
+  - ingeniería biomédica
+  - TL084
